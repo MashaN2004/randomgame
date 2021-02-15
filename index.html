@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.body{
+			background-image: url(https://i.pinimg.com/originals/15/7c/ed/157cedaac1e7a5686934068143683537.jpg);
+			background-size: 100% 100%;
+			height: 700px;
+			width: 1500px;
+			padding-top: 100px;
+		}
+		.h1{
+			text-align: center;
+		}
+		.h3{
+			text-align: center;
+		}
+		.btn{
+			background: black;
+			color: white;
+			border: none;
+			height: 40px;
+			width: 150px;
+			font-size: 20px;
+			position: absolute;
+			top: 230px;
+			left: 680px;
+		}
+		.box1{
+			background-image: url(http://2.bp.blogspot.com/-Mp_Q-5XtGRs/UibR3ZA9ZgI/AAAAAAAAl5Y/QWP2XeDe_vM/w1200-h630-p-k-no-nu/hora-de-aventura-la-princesa-fantasma.jpg);
+			background-size: 100% 100%;
+			
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 300px;
+			left: 200px;
+		}
+		.box2{
+			background-image: url(https://i.ytimg.com/vi/y69dxP4fk1Y/maxresdefault.jpg);
+			background-size: 100% 100%;
+			
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 300px;
+			left: 600px;
+		}
+		.box3{
+			background-image: url(https://i.ytimg.com/vi/PwWSjnInDRU/maxresdefault.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 300px;
+			left: 1000px;
+		}
+		.box4{
+			background-image: url(https://images.squarespace-cdn.com/content/51b3dc8ee4b051b96ceb10de/1491258993809-KS6EXPW66SUZ1WZYYEKP/jake-and-finn-return-to-the-land-of-ooo-in-adventure-time-elements-and-its-a-lot-weirder-social.jpg?format=1500w&content-type=image%2Fjpeg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 550px;
+			left: 200px;
+		}
+		.box5{
+			background-image: url(https://y.yarn.co/e59e96dd-12f7-4936-8db4-1537d40a9aee_screenshot.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 550px;
+			left: 600px;
+		}
+		.box6{
+			background-image: url(https://pbs.twimg.com/media/EMgpl93WkAApy0r.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 550px;
+			left: 1000px;
+		}
+		.m{
+			margin: 0;
+		}		
+	</style>
+</head>
+<body class="m">
+	<div class="body">
+		<h1 class="h1">Где находится Призрак?</h1>
+		<h3 class="h3">Осталось попыток: <span class="text">2</span></h3>
+		<button class="btn">Перемешать</button>
+		
+			<div class="box1">
+				1
+			</div>
+			<div class="box2">
+				2
+			</div>
+			<div class="box3">
+				3
+			</div>
+		
+		
+			<div class="box4">
+				4
+			</div>
+			<div class="box5">
+				5
+			</div>
+			<div class="box6">
+				6
+			</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		let attempts = 3;
+		document.querySelector('.text').innerHTML = attempts;
+		document.querySelector('.btn').onclick = function(){
+			document.querySelector('.box1').style.left = '600px'
+			document.querySelector('.box1').style.background = 'black';
+			document.querySelector('.box1').style.transition = '2s'
+
+			document.querySelector('.box2').style.left = '200px'
+			document.querySelector('.box2').style.background = 'black';
+			document.querySelector('.box2').style.transition = '2s'
+
+			document.querySelector('.box3').style.top = '550px'
+			document.querySelector('.box3').style.background = 'black';
+			document.querySelector('.box3').style.transition = '2s'
+
+			document.querySelector('.box4').style.left = '600px'
+			document.querySelector('.box4').style.background = 'black';
+			document.querySelector('.box4').style.transition = '2s'
+
+			document.querySelector('.box5').style.left = '200px'
+			document.querySelector('.box5').style.background = 'black';
+			document.querySelector('.box5').style.transition = '2s'
+
+			document.querySelector('.box6').style.top = '300px'
+			document.querySelector('.box6').style.background = 'black';
+			document.querySelector('.box6').style.transition = '2s'
+		}
+
+		document.querySelector('.box1').onclick = function(){
+		 	alert("Cool");
+		 	document.querySelector('.body').style.display = 'none';
+		 }
+
+		document.querySelector('.box2').onclick = function(){
+			attempts= attempts -1;
+			document.querySelector('.text').innerHTML = attempts;
+
+			if (attempts == 0){
+		 		alert("LOOSER");
+		 		document.querySelector('.body').style.display = 'none';
+		 	
+		 	}
+		 }
+		 document.querySelector('.box3').onclick = function(){
+			attempts= attempts -1;
+			document.querySelector('.text').innerHTML = attempts;
+
+			if (attempts == 0){
+		 		alert("LOOSER");
+		 		document.querySelector('.body').style.display = 'none';
+		 	
+		 	}
+		 }
+		 document.querySelector('.box4').onclick = function(){
+			attempts= attempts -1;
+			document.querySelector('.text').innerHTML = attempts;
+
+			if (attempts == 0){
+		 		alert("LOOSER");
+		 		document.querySelector('.body').style.display = 'none';
+		 	
+		 	}
+		 }
+		 document.querySelector('.box5').onclick = function(){
+			attempts= attempts -1;
+			document.querySelector('.text').innerHTML = attempts;
+
+			if (attempts == 0){
+		 		alert("LOOSER");
+		 		document.querySelector('.body').style.display = 'none';
+		 	
+		 	}
+		 }
+		 document.querySelector('.box6').onclick = function(){
+			attempts= attempts -1;
+			document.querySelector('.text').innerHTML = attempts;
+
+			if (attempts == 0){
+		 		alert("LOOSER");
+		 		document.querySelector('.body').style.display = 'none';
+		 	
+		 	}
+		 }
+	</script>
+</body>
+</html>
